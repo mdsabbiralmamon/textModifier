@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar title='Text Modifier' navItem1='Home' navItem2='About us' navItem3='Contact us' />
     </>
   );
 }
