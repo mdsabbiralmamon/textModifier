@@ -30,13 +30,13 @@ export default function Navbar(props) {
     </nav>
   )
 }
-
-Navbar.propTypes = {title: PropTypes.string,
+//Declaring Property's Types
+Navbar.propTypes = {title: PropTypes.string.isRequired,
                     navItem1: PropTypes.string,
                     navItem2: PropTypes.string,
                     navItem3: PropTypes.string,
                 }
-
+//Declaring Default Values for Props
 Navbar.defaultProps = {title: 'Set Title Here',
                        navItem1: 'Set first navbar menu',
                        navItem2: 'Set second navbar menu',
