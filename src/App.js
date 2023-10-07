@@ -6,9 +6,7 @@ function App() {
   return (
     <>
       <Navbar title='Text Modifier' navItem1='Home' navItem2='About us' navItem3='Contact us' />
-      <div className="container my-3">
-        <TextForm heading ="Paste Your Texts Here" details ="Enter your texts here which you want to modify" />
-      </div>
+      <TextForm heading ="Paste Your Texts Here" details ="Enter your texts here which you want to modify" />
     </>
   );
 }
