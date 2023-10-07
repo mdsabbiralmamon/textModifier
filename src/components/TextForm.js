@@ -2,19 +2,25 @@ import React, {useState} from 'react'
 
 export default function TextForm(props) {
   const handleOnChange = (event)=>{
-    // console.log("On change triggered")
+    // enableing Edit/Input Function inside Text Area.
     setText(event.target.value);
   }
 
   const handleBtnUppercase = ()=>{
-    // console.log("Convert to uppercase button was clicked");
+    // Setting text to Uppercase.
     let newText = text.toUpperCase();
     setText(newText)
   }
 
   const handleBtnLowercase = ()=>{
-    // console.log("Convert to uppercase button was clicked");
+    // Setting Text to Lowercase.
     let newText = text.toLowerCase();
+    setText(newText)
+  }
+
+  const handleBtnLoremIpsum = ()=>{
+    // Dummy text Generator.
+    let newText = ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam tellus, porta in libero lobortis, lobortis laoreet est. Nulla congue commodo diam nec mollis. Proin dapibus porta aliquet. Fusce rutrum massa tristique ante porta varius. Mauris maximus felis eget quam volutpat, eget molestie velit consectetur. Praesent mollis, nibh eu sodales fringilla, sem sapien venenatis odio, sed volutpat eros nunc non felis. Nullam sagittis elit eget nibh euismod rutrum. Fusce sapien felis, pharetra sed leo vitae, porta pharetra urna. Donec commodo, nisi non porta dictum, diam tortor molestie odio, non venenatis metus leo eget quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam quis blandit justo. Duis a ligula quis libero consectetur ultrices at eget dolor. Sed finibus nulla lectus, a rhoncus erat dignissim sed. Etiam dui dui, pulvinar ac sollicitudin ut, pretium id tortor. Ut quis blandit lorem. Ut sagittis commodo felis tincidunt sagittis.");
     setText(newText)
   }
 
@@ -34,6 +40,7 @@ export default function TextForm(props) {
           </div>
           <button className="btn btn-primary mx-1" onClick={handleBtnUppercase}>Convert to Uppercase</button>
           <button className="btn btn-primary mx-1" onClick={handleBtnLowercase}>Convert to Lowercase</button>
+          <button className="btn btn-primary mx-1" onClick={handleBtnLoremIpsum}>Add Dummy Texts</button>
           <button className="btn btn-primary mx-1" onClick={handleBtnClearText}>Clear Text</button>
       </div>
       <div className="container my-3">
