@@ -24,6 +24,14 @@ export default function TextForm(props) {
     setText(newText)
   }
 
+  const handleBtnCopy = ()=>{
+    // copy text button
+    let newText = document.getElementById('textMainBox');
+    newText.select();
+    newText.setSelectionRange(0, 9999);
+    navigator.clipboard.writeText(newText.value);
+  }
+
   const handleBtnClearText = ()=>{
     // console.log("Clear text button clicked");
     let newText = ("");
@@ -41,6 +49,7 @@ export default function TextForm(props) {
           <button className="btn btn-primary mx-1" onClick={handleBtnUppercase}>Convert to Uppercase</button>
           <button className="btn btn-primary mx-1" onClick={handleBtnLowercase}>Convert to Lowercase</button>
           <button className="btn btn-primary mx-1" onClick={handleBtnLoremIpsum}>Add Dummy Texts</button>
+          <button className="btn btn-primary mx-1" onClick={handleBtnCopy}>Copy Texts</button>
           <button className="btn btn-primary mx-1" onClick={handleBtnClearText}>Clear Text</button>
       </div>
       <div className="container my-3">
