@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+#light {
+  background-color: #fff ; 
+}
+
+#dark {
+  background-color: #282c34;
+}
+
+
+#dark nav{
+  background-color: #282c34 !important;
+}
+
+
